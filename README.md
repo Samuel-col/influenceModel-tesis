@@ -11,5 +11,5 @@ A continuación se listan los archivos indicando a qué sección del documento c
 * `reading_data.r`: Carga de la red social de la sección 3.1.1. Genera la figura 3-1 y la tabla 3-1. No tiene dependencias. 
 * `jags_implementation.R`: Ajuste del modelo de influencia a la red social de la Reforma Tributaria y el análisis de los resultados. Corresponde a las secciones 3.1.1.1 a 3.1.1.4. Depende de `reading_data.r`.
 * `aditional_inference_results.R`:
-* [`reading_data.r`](influenceModel-tesis/reading_data.R) 
+* [`reading_data.r`](/reading_data.r) 
 * `jags_implementation_null_model.R`: Ajuste del modelo de la sección 3.1.1.5. Depende de `reading_data.r`.
