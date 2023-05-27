@@ -2,6 +2,8 @@
 
 Este trabajo contiene todo el código fuente y los datos necesarios para replicar los resultados del trabajo "Modelamiento Bayesiano de redes sociales online de influencia y su impacto en la formación de la opinión pública" de Samuel Hernando Sánchez Gutiérrez.
 
+Los paquetes necesarios para este trabajo son: `car`, `cluster`, `coda`, `dplyr`, `fda`, `fields`, `igraph`, `paletteer`, `R2jags`, `Rcpp`, `RcppArmadillo`, `scales`, `tseries` y `xtable`.
+
 Algunos de los archivos `.R` exportan objetos de tipo `.RData` que otros cargan. También pueden exportar archivos `.RData` con resultados parciales con la función `save` para leerlos inmediatamente con la función `load`, ésto se hace para evitar tener que correr mútiples veces segmentos de código que pueden tomar horas en ejecutarse. Dichos segmentos se encuentran comentados en algunos casos para evitar correr accidentalmente una tarea de gran magnitud, por tanto, se le recomienda revisar el código comentado pues en la mayoría de casos puede ser importante ejecutarlo para generar los archivos `.RData` que se utlizan más adelante o en otros archivos.
 
 A continuación se listan los archivos indicando a qué sección del documento corresponden y sus dependencias (archivos que se deben ejecutar primero para tener los `.RData` necesarios):
@@ -16,3 +18,5 @@ A continuación se listan los archivos indicando a qué sección del documento c
 * [`simulate_from_influence_model.R`](/simulate_from_influence_model.R): Genera todos los resultados presentados en la sección 3.2. No tiene dependencias.
 * [`cascade.cpp`](/cascade.cpp): Exporta la función que se utiliza para simular las difusiones en [`simulate_from_influence_model.R`](/simulate_from_influence_model.R). Este archivo no tiene dependencias ni debe ser ejecutado manualmente.
 * [`optimize.cpp`](/optimize.cpp): Exporta la función que halla k* (definido en la sección 2.2.3) en las simulaciones ejecutadas en [`simulate_from_influence_model.R`](/simulate_from_influence_model.R). Este archivo no tiene dependencias ni debe ser ejecutado manualmente.
+
+Nota: Algunos de los gráficos generados en [`jags_implementation.R`](/jags_implementation.R) y [`simulate_from_influence_model.R`](/simulate_from_influence_model.R) no se presentaron en el documento pero pueden ser de interés para el lector.
