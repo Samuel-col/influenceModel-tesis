@@ -837,8 +837,6 @@ xtable::xtable(anova(model_time))
 ## Homocedasticidad ----
 
 
-### Bartlett ----
-
 library(dplyr)
 
 full_res_df %>% tibble %>% 
