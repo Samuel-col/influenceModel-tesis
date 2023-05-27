@@ -10,7 +10,7 @@ A continuación se listan los archivos indicando a qué sección del documento c
 * [`gamma_densities_plots.R`](/gamma_densities_plots.R): Generación del gráfico de la figura 2-4. No tiene dependencias.
 * [`reading_data.r`](/reading_data.r) : Carga de la red social de la sección 3.1.1. Genera la figura 3-1 y la tabla 3-1. No tiene dependencias. 
 * [`jags_implementation.R`](/jags_implementation.R): Ajuste del modelo de influencia a la red social de la Reforma Tributaria y el análisis de los resultados. Corresponde a las secciones 3.1.1.1 a 3.1.1.4. Depende de [`reading_data.r`](/reading_data.r).
-* [`aditional_inference_results.R`](/aditional_inference_results.R): Genera la figura 3-7 y la tabla 3-4 de la sección 3.1.1.3. Depende de [`reading_data.r`](/reading_data.r) y [`jags_implementation.R`](/jags_implementation.R).
+* [`aditional_inference_results.R`](/aditional_inference_results.R): Genera la figura 3-7 y la tabla 3-4 de la sección 3.1.1.3. Depende de [`jags_implementation.R`](/jags_implementation.R).
 * [`jags_implementation_null_model.R`](/jags_implementation_null_model.R): Ajuste del modelo de la sección 3.1.1.5. Depende de [`reading_data.r`](/reading_data.r).
 * [`simulations_for_influence_model.R`](/simulations_for_influence_model.R): Simulación para el modelo de influencia contemplada en la sección 3.1.2. depende de [`jags_implementation.R`](/jags_implementation.R).
 * [`simulate_from_influence_model.R`](/simulate_from_influence_model.R): Genera todos los resultados presentados en la sección 3.2 (Estudio de simulación de difusiones en una red de influencia). No tiene dependencias.
