@@ -16,6 +16,24 @@ comp <- components(G)
 comp$csize[1]/vcount(G)
 G <- subgraph(G,which(comp$membership==1))
 
+model <- function(){
+  # likelihood
+  for(i in 1:N){
+    for(j in 1:N){
+      y[i,j]        ~ dbern(ilogit(linPred[i,j]))
+      linPred[i,j] <- O[i] + inprod(u[i,],u[j,])/sqrt(inprod(u[i,],u[i,]))
+    }
+  }
+  
+  # prior
+  O[i] ~ dnorm(0,iw)
+  for(i in 1:N){
+    u[i,1:p] ~ dmnorm(u0,is*I)
+  }
+  iw ~ dgamma(aw,bw)
+  is ~ dgamma(as,bs)
+}
+
 # prior parameters
 p <- 2
 N <- vcount(G)
