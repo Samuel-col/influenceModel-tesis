@@ -465,6 +465,7 @@ my_palette <- colorRampPalette(c("blue","orange"))
 my_palette <- colorRampPalette(my.pal[5:4])
 cols_grid <- my_palette(100)
 cols <- cols_grid[round((O_hat-min(O_hat))/(max(O_hat)-min(O_hat))*100)]
+O_cols <- cols
 
 
 n_extremes <- 3
@@ -864,6 +865,20 @@ grid()
 abline(h = 0, v = 0, col = "#dddddd")
 dev.off()
 
+### Posterior social space by group and O ----
+pdf(paste0(path_code,"latent_space_by_O_and_cluster.pdf"),height = 6,width = 7)
+par(bty = "l",mar = c(5,4,4,5))
+plot(u_mean,pch = c(15,17)[id_groups],
+     col = scales::alpha(O_cols,0.3),
+     main = expression(paste(widehat(E)(bold(u)[i],"|", bold(Y)),"  ",i==1,",",ldots,",",N)),
+     xlab = "1ra dimensión",ylab = "2da dimensión")
+image.plot(legend.only = T,zlim=range(O_hat),
+           col = cols_grid,add = TRUE,
+           legend.shrink = 0.8,
+           horizontal = F)
+grid()
+abline(h = 0, v = 0, col = "#dddddd")
+dev.off()
 
 
 
